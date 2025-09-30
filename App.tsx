@@ -7,6 +7,7 @@ import {
   Poppins_700Bold
 } from '@expo-google-fonts/poppins';
 import CreateInfro from './src/screen/CreateInfro';
+import Home from './src/screen/Home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,6 +26,6 @@ export default function App() {
   }
 
   return (
-    <CreateInfro />
+    <Home />
   );
 }

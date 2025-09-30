@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-
 import { FlatList } from "react-native";
 import { imagesSlider } from "../../image/imagesSlider";
 import { 
@@ -7,20 +6,15 @@ import {
   AreaflexTitle, 
   AreaMoney, 
   AreaProfile, 
-  AreaResult, 
   AreaWeek, 
-  ButtonCurse, 
-  CardReasultsWeek, 
-  Container, 
-  DescriptionWeek, 
-  IconResultWeek, 
+  ButtonCurse,  
+  Container,
   ImageButtonCourse, 
   ImageProfile, 
   ImageSlider, 
   ImageSliderArea, 
   larguraSlider, 
   NameProfile, 
-  ResultWeek, 
   Scrolli, 
   TableSell, 
   TextCoin, 
@@ -30,6 +24,7 @@ import {
   WarnText
 } from "./styles";
 import * as Linking from "expo-linking";
+import { CardResults } from "../../components/CardResults";
 
 export default function Home() {
   const flatListRef = useRef<FlatList>(null);
@@ -87,30 +82,24 @@ export default function Home() {
           </AreaProfile>
           <AreaWeek>
             <TitleCategory>Perfomance desta semana</TitleCategory>
+            <CardResults 
+              url="https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FVenda.37214f5d.png&w=48&q=75" 
+              result="0" 
+              description="Vendas"
+            />
 
-            <CardReasultsWeek>
-              <IconResultWeek source={{ uri: "https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FVenda.37214f5d.png&w=48&q=75"}} />
-              <AreaResult>
-                <ResultWeek>0</ResultWeek>
-                <DescriptionWeek>Vendas</DescriptionWeek>
-              </AreaResult>
-            </CardReasultsWeek>
+            <CardResults 
+              url="https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMixeiro.9a1fb7f6.png&w=48&q=75" 
+              result="0" 
+              description="Mixeiros"
+            />
 
-            <CardReasultsWeek>
-              <IconResultWeek source={{ uri: "https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMixeiro.9a1fb7f6.png&w=48&q=75"}} />
-              <AreaResult>
-                <ResultWeek>0</ResultWeek>
-                <DescriptionWeek>Mixeiros</DescriptionWeek>
-              </AreaResult>
-            </CardReasultsWeek>
-
-            <CardReasultsWeek>
-              <IconResultWeek source={{ uri: "https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGanho.fe28c300.png&w=48&q=75"}} />
-              <AreaResult>
-                <ResultWeek>0,00 Kz</ResultWeek>
-                <DescriptionWeek>Ganhos</DescriptionWeek>
-              </AreaResult>
-            </CardReasultsWeek>
+            <CardResults 
+              url="https://app.kuenha.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGanho.fe28c300.png&w=48&q=75" 
+              result="0,00 Kz" 
+              description="Ganhos"
+            />
+            
 
             <TableSell>
               <TitleCategory>Últimas Vendas</TitleCategory>
