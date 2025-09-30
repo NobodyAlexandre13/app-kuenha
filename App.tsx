@@ -8,6 +8,7 @@ import {
 } from '@expo-google-fonts/poppins';
 import CreateInfro from './src/screen/CreateInfro';
 import Home from './src/screen/Home';
+import Analytics from './src/screen/Analytics';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,6 +27,6 @@ export default function App() {
   }
 
   return (
-    <Home />
+    <Analytics />
   );
 }
